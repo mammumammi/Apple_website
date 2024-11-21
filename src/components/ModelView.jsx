@@ -1,7 +1,7 @@
 import { View } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import React from 'react';
 
+import IPhone from './IPhone';
 const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationSize, size, item }) => {
   return (
     <Canvas className="w-full h-full">
@@ -14,6 +14,7 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationSize, siz
       >
         <ambientLight intensity={0.3} />
       </View>
+      <IPhone />
     </Canvas>
   );
 };
