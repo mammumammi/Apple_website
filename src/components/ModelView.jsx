@@ -1,19 +1,20 @@
-import { PerspectiveCamera, View } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
+import { Html,OrbitControls,PerspectiveCamera, View } from '@react-three/drei';
+
+import { Suspense } from 'react';
 import Lights from './Lights';
-import { div } from 'three/webgpu';
-import IPhone from './iPhone.jsx';
+import * as THREE from 'three'
+//import Loader from './Loader';
+import iPhone from './IPhone';
 
 const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationSize, size, item }) => {
   return (
     
       
-    <Canvas className="w-full h-full">
+    
       <View
         index={index}
         id={gsapType}
-        className={`border-2 border-red-500 w-full h-full ${
+        className={`w-full h-full absolute border-2 border-red-500 w-full h-full ${
           index === 2} ? 'right-[-100%]' : ''
           `}
           >
@@ -25,10 +26,10 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationSize, siz
         <Suspense
         fallback={<div>Loading</div>}
         >
-        <IPhone />
+        <iPhone />
         </Suspense>
       </View>
-    </Canvas>
+  
           
   );
 };
