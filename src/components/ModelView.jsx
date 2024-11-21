@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 import Lights from './Lights';
 import { div } from 'three/webgpu';
-import IPhone from './iPhone';
+import IPhone from './iPhone.jsx';
 
 const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationSize, size, item }) => {
   return (
