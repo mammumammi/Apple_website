@@ -1,36 +1,20 @@
-import { Html,OrbitControls,PerspectiveCamera, View } from '@react-three/drei';
-
-import { Suspense } from 'react';
-import Lights from './Lights';
-import * as THREE from 'three'
-//import Loader from './Loader';
-import iPhone from './IPhone';
+import { View } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import React from 'react';
 
 const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationSize, size, item }) => {
   return (
-    
-      
-    
+    <Canvas className="w-full h-full">
       <View
         index={index}
         id={gsapType}
-        className={`w-full h-full absolute border-2 border-red-500 w-full h-full ${
-          index === 2} ? 'right-[-100%]' : ''
-          `}
-          >
+        className={`border-2 border-red-500 w-full h-full ${
+          index === 2 ? 'right-[-100%]' : ''
+        }`}
+      >
         <ambientLight intensity={0.3} />
-
-        <PerspectiveCamera makeDefault position={[0,0,4]} />
-        <Lights />
-
-        <Suspense
-        fallback={<div>Loading</div>}
-        >
-        <iPhone />
-        </Suspense>
       </View>
-  
-          
+    </Canvas>
   );
 };
 
