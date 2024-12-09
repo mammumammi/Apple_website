@@ -1,3 +1,4 @@
+
 import { OrbitControls, PerspectiveCamera, View } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import Lights from './Lights'
@@ -7,8 +8,7 @@ import * as THREE from 'three';
 import Loader from './Loader';
 const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, size, item }) => {
   return (
-    <Canvas className="w-full h-full">
-      <View
+    <View
         index={index}
         id={gsapType}
         className={`w-full h-full ${
@@ -30,14 +30,13 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, si
         <group ref={groupRef} name={`${index==1}? 'small' :'large'`} position={[0,0,0]}>
         <Suspense fallback={<Loader />}></Suspense>
         </group>
-        <IPhone
+      
+      <IPhone
       scale={index ===1 ? [15,15,15] : [17,17,17]}
       item={item}
       size={size}
       />
-      </View>
-      
-    </Canvas>
+    </View>
   );
   
 };

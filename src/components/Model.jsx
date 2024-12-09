@@ -1,3 +1,4 @@
+
 import { useGSAP } from '@gsap/react';
 import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
@@ -7,6 +8,7 @@ import { yellowImg } from '../utils';
 import * as THREE from 'three';
 import { View } from '@react-three/drei';
 import { models, sizes } from '../constants';
+
 import { Canvas } from '@react-three/fiber';
 
 const Model = () => {
@@ -62,7 +64,7 @@ const Model = () => {
                             size={size}
                         />
 
-                            <Canvas
+                        <Canvas
                             className='w-full h-full'
                             style={{
                                 position: 'fixed',
@@ -73,12 +75,9 @@ const Model = () => {
                                 overflow: "hidden"
                             }}
                             eventSource={document.getElementById('root')}
-                        
-                            >
-
-                            </Canvas>
+                        >
                             <View.Port />
-                        
+                        </Canvas>
                     </div>
 
                     <div className='mx-auto w-full'>
