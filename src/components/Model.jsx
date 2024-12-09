@@ -7,6 +7,7 @@ import { yellowImg } from '../utils';
 import * as THREE from 'three';
 import { View } from '@react-three/drei';
 import { models, sizes } from '../constants';
+import { Canvas } from '@react-three/fiber';
 
 const Model = () => {
     const [size, setSize] = useState('small');
@@ -61,7 +62,7 @@ const Model = () => {
                             size={size}
                         />
 
-                        <canvas
+                            <Canvas
                             className='w-full h-full'
                             style={{
                                 position: 'fixed',
@@ -72,9 +73,12 @@ const Model = () => {
                                 overflow: "hidden"
                             }}
                             eventSource={document.getElementById('root')}
-                        >
+                        
+                            >
+
+                            </Canvas>
                             <View.Port />
-                        </canvas>
+                        
                     </div>
 
                     <div className='mx-auto w-full'>
