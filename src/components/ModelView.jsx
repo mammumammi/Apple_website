@@ -11,11 +11,11 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, si
     <View
         index={index}
         id={gsapType}
-        className={`w-full h-full ${
+        className={`w-full h-full absolute ${
           index === 2 ? 'right-[-100%]' : ''
         }`}
       >
-        <ambientLight intensity={0.3} />
+        <ambientLight intensity={0.1} />
         <PerspectiveCamera makeDefault position={[0,0,4]} />
         <Lights />
         <OrbitControls
