@@ -13,6 +13,9 @@ export default defineConfig({
   }), sentryVitePlugin({
     org: "aashin",
     project: "javascript-react"
+  }), sentryVitePlugin({
+    org: "aashin",
+    project: "javascript-react"
   })],
 
   build: {
