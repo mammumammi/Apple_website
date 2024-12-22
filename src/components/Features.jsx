@@ -3,15 +3,16 @@ import React, { useRef } from 'react'
 import { animateWithGsap } from '../utils/animations';
 import { explore1Img, explore2Img, exploreVideo } from '../utils';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger)
 const Features = () => {
     const videoRef = useRef();
     useGSAP( ()=> {
-        animateWithGsap('#features_title',{ y:0,opacity:1})
-        animateWithGsap(
-            '.g_grow',
-            { scale: 1 ,opacity: 1 ,ease: 'power1' },
-            { scrub: 5.5 }
-        );
+        animateWithGsap('#features_title',{ y:0, opacity:1 })
+        
+        animateWithGsap('.g_grow',{scale:1, opacity:1, ease:'power1'},{ scrub:5.5 })
+        
+           
     },[]);
   return (
     <section className='h-full common-padding relative overflow-hidden'>
