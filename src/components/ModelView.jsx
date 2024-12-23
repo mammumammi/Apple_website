@@ -1,6 +1,5 @@
 
 import { OrbitControls, PerspectiveCamera, View } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
 import Lights from './Lights'
 import IPhone from './IPhone';
 import { Suspense } from 'react';
